@@ -1,0 +1,17 @@
+class Empleado:
+    def pedir_nombre(self):
+        self.nombre = input("Ingrese el nombre del empleado: ")
+
+class Salario:
+    def pedir_salario(self):
+        self.salario = float(input("Ingrese el salario del empleado: "))
+
+class Designacion(Empleado, Salario):
+    def asignar_cargo(self, cargo):
+        self.cargo = cargo
+        print(f"Designación: {self.nombre} - Cargo: {self.cargo} - Salario: {self.salario}")
+
+empleado_designado = Designacion()
+
+empleado_designado.pedir_nombre()
+empleado_designado.pedir_salario()
